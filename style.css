@@ -12,3 +12,21 @@
 .lives{position:absolute;left:15px;top:46px;display:flex;gap:5px}.life{display:inline-block;color:#cda67c;font-size:17px;transform:rotate(45deg);text-shadow:1px 2px #422e22}.life.lost{color:#56504c;text-shadow:none}.score{top:75px;padding:2px 10px}.score b{font-size:18px}@media(max-height:730px){.lives{top:42px}.score{top:65px}.round-label{bottom:5px}}
 .character-link{display:inline-block;margin-left:7px;color:#e3caff;font-size:12px;text-decoration:underline;text-underline-offset:3px}.pig-controls .red{left:28%}.pig-controls .slot:nth-child(2){left:60%}.pig-controls .slot:nth-child(3){left:84%}.pig-controls .yellow{left:17%;top:calc(clamp(65px,20vw,93px) + 25px)}.pig-controls .orange{left:40%;top:calc(clamp(65px,20vw,93px) + 25px)}.pig-controls .purple{left:72%;top:calc(clamp(65px,20vw,93px) + 25px)}.token.paired:after{content:'';position:absolute;left:calc(100% - 3px);top:calc(50% - 2px);width:12px;height:4px;background:#d3bfce80;z-index:1;pointer-events:none}@media(max-height:730px){.pig-controls .yellow,.pig-controls .orange,.pig-controls .purple{top:calc(clamp(58px,18vw,79px) + 21px)}}
 .controls,.controls .input{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.controls img{pointer-events:none;-webkit-user-drag:none}.track div{width:100%;transform-origin:left center;transition:none;will-change:transform}
+
+/* 랭킹 / 이름 입력 : 내용이 길어지면 오버레이 안에서 스크롤 */
+.overlay{display:flex;overflow-y:auto}.dialog{margin:auto}
+.name-entry{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 14px}.name-entry[hidden]{display:none}
+.name-entry-label{flex-basis:100%;font-size:13px;color:#e3caff}
+.name-entry input{flex:1;min-width:0;padding:8px 10px;border-radius:7px;border:1px solid #ffffff35;background:#19151bcc;color:#fff;font:inherit;font-size:16px}
+.ranking-box{margin-top:18px;text-align:left}.ranking-box[hidden]{display:none}
+.ranking-box h2{font-size:14px;margin:0 0 8px;color:#e2d7c8;text-align:center}
+.ranking-box h2 small{font-size:11px;color:#a69bac;font-weight:400;margin-left:4px}
+.ranking{list-style:none;margin:0;padding:0;font-size:13px}
+.ranking li{display:flex;align-items:center;gap:8px;padding:4px 8px;border-radius:7px;color:#d5d0df}
+.ranking li:nth-child(odd){background:#ffffff0d}
+.ranking li.me{background:#6c479f88;color:#fff;font-weight:700}
+.ranking .rank{width:20px;text-align:center;color:#b6a7d7}
+.ranking .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ranking .points{font-variant-numeric:tabular-nums}
+.ranking .combo{width:56px;text-align:right;font-size:11px;color:#a69bac}
+.ranking .ranking-empty{justify-content:center;color:#a69bac}
